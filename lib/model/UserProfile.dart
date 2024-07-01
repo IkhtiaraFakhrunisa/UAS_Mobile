@@ -3,14 +3,14 @@ class UserProfile {
   String name;
   String email;
   String password;
-  String? image;
+
 
   UserProfile({
     this.id,
     required this.name,
     required this.email,
     required this.password,
-    this.image,
+
   });
 
   Map<String, dynamic> toMap() {
@@ -19,7 +19,6 @@ class UserProfile {
       'name': name,
       'email': email,
       'password': password,
-      'image': image,
     };
   }
 
@@ -29,7 +28,6 @@ class UserProfile {
       name: map['name'],
       email: map['email'],
       password: map['password'],
-      image: map['image'],
     );
   }
 }

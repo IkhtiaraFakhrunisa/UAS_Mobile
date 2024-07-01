@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../domain/local_storage.dart'; // Sesuaikan dengan lokasi file DatabaseHelper
+import 'package:harry_potter_app/domain/local_storage.dart';
 
 class LoginScreen extends StatelessWidget {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final DatabaseHelper dbHelper = DatabaseHelper(); // Initialize database helper
+  final DatabaseHelper dbHelper = DatabaseHelper();
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,6 @@ class LoginScreen extends StatelessWidget {
                   return;
                 }
 
-                // Cek ke database/helper apakah user sudah terdaftar atau belum
                 bool isLoggedIn = await dbHelper.checkUser(name, password);
 
                 if (isLoggedIn) {
@@ -61,13 +60,12 @@ class LoginScreen extends StatelessWidget {
               },
               child: Text('Login'),
             ),
-
             SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/signup');
               },
-              child: Text('Go to Signup'),
+              child: Text('Sign Up'),
             ),
           ],
         ),

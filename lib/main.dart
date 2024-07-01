@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:harry_potter_app/domain/local_storage.dart';
-import 'screen/detail.dart';
-import 'screen/home.dart';
-import 'screen/splash.dart';
-import 'screen/login.dart';
-import 'screen/signup.dart';
+import 'package:harry_potter_app/screen/detail.dart';
+import 'package:harry_potter_app/screen/home.dart';
+import 'package:harry_potter_app/screen/splash.dart';
+import 'package:harry_potter_app/screen/login.dart';
+import 'package:harry_potter_app/screen/signup.dart';
+import 'package:harry_potter_app/screen/user_profile.dart';
 
 void main() {
   runApp(MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   @override
@@ -31,9 +31,9 @@ class MyApp extends StatelessWidget {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Color(0xFFc39a1c)),
-            foregroundColor: MaterialStateProperty.all(Color(0xFF3d2f22)),
-            textStyle: MaterialStateProperty.all(TextStyle(fontFamily: 'HarryP')),
+            backgroundColor: WidgetStateProperty.all(Color(0xFFc39a1c)),
+            foregroundColor: WidgetStateProperty.all(Color(0xFF3d2f22)),
+            textStyle: WidgetStateProperty.all(TextStyle(fontFamily: 'HarryP')),
           ),
         ),
         inputDecorationTheme: InputDecorationTheme(
@@ -52,8 +52,8 @@ class MyApp extends StatelessWidget {
         '/login': (context) => LoginScreen(),
         '/signup': (context) => SignupScreen(),
         '/home': (context) => HomeScreen(),
-        '/detail': (context) => DetailScreen(character: {},),
-
+        '/detail': (context) => DetailScreen(character: {}),
+        '/profile': (context) => UserProfilePage(userId: 1,), // Replace with actual user ID
       },
     );
   }

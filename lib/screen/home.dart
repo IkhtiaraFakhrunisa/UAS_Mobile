@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
     // Navigate to user profile page
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => UserProfilePage()),
+      MaterialPageRoute(builder: (context) => UserProfilePage(userId: 1,)),
     );
   }
 
