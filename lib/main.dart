@@ -7,6 +7,8 @@ import 'package:harry_potter_app/screen/login.dart';
 import 'package:harry_potter_app/screen/signup.dart';
 import 'package:harry_potter_app/screen/user_profile.dart';
 
+import 'detail/view_character.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -52,7 +54,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => LoginScreen(),
         '/signup': (context) => SignupScreen(),
         '/home': (context) => HomeScreen(),
-        '/detail': (context) => DetailScreen(character: {}),
+        '/detail': (context) => DetailScreen(character: {}, characterData: {},),
         '/profile': (context) => UserProfilePage(userId: 1,), // Replace with actual user ID
       },
     );

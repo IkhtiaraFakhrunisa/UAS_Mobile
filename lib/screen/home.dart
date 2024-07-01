@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'detail.dart'; // Assuming DetailScreen is now in detail.dart
-import 'login.dart'; // Assuming your login screen is in login.dart
-import 'user_profile.dart'; // Assuming your user profile screen is in user_profile.dart
+import '../detail/view_character.dart';
+import 'login.dart';
+import 'user_profile.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -141,7 +141,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           context,
                           MaterialPageRoute(
                             builder: (context) => DetailScreen(
-                                character: filteredCharacters[index]),
+                                characterData: filteredCharacters[index], character: {},),
                           ),
                         );
                       },
